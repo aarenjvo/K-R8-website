@@ -1,0 +1,9 @@
+* {
+  /* font-family: 'Switzer', sans-serif; */
+  /* font-family: 'Sentient', serif; */
+  font-family: 'Satoshi', sans-serif;
+}
+
+#searchBar {
+  min-width: 350px;
+}
