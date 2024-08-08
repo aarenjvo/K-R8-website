@@ -11,8 +11,8 @@ function LoginForm({ isVisible, onClose }) {
 
     return (
         <main>
-            <div className='fixed w-full inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex justify-evenly items-center border border-slate-300 drop-shadow-md' id='loginWrapper' onClick={handleClose}>
-                <div className='lg:w-[50%] flex justify-center'>
+            <div className='fixed w-full inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex justify-evenly items-center border border-slate-300 drop-shadow-md'>
+                <div className='lg:w-[50%] h-full items-center flex justify-center' id='loginWrapper' onClick={handleClose}>
                 <div className='w-[500px] flex flex-col'>
                     
                     <button className='w-20 text-white text-xl place-self-end hover:scale-150 transition-all' onClick={() => onClose()}>X</button>

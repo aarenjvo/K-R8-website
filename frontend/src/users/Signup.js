@@ -10,25 +10,43 @@ function SignupForm({ isVisible, onClose }) {
 
     return (
         <main>
-            <div className='fixed w-full inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex justify-evenly items-center border border-slate-300 drop-shadow-md' id='signupWrapper' onClick={handleClose}>
-                <div className='lg:w-[50%] flex justify-center'>
-                    <div className='w-[500px] flex flex-col'>
-
-                        <button className='w-20 text-white text-xl place-self-end hover:scale-150 transition-all' onClick={() => onClose()}>X</button>
+            <div className='fixed w-full inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex justify-evenly items-center border border-slate-300 drop-shadow-md'>
+                <div className='lg:w-[50%] h-full items-center flex justify-center' id='signupWrapper' onClick={handleClose}>
+                    <div className='relative w-[500px] flex flex-col'>
                         <div className='bg-white p-2 mx-8 rounded-lg p-6 text-left'>
-                            <h3 className='text-xl font-semibold mb-5'>Signup</h3>
-                            <form class='space-y-6' action='#'>
-                                <div>
-                                    <div className='row flex justify-between'>
-                                    <label for='firstName' className='block mb-2 text-sm font-medium'></label>
-                                    <input type='firstName' name='firstName' className='mr-1 bg-gray-50 border border-slate-300 text-sm rounded-lg focus:bg-slate-100 focus:outline-secondarycol block w-full p-2.5' placeholder='First name' required />
+                            <button className='w-20 absolute top-1 right-3 text-black-300 text-xl place-self-end hover:scale-110 transition-all' onClick={() => onClose()}>X</button>
+                            <div className='drop-shadow-md border-b mb-8 border-black'>
+                                <h3 className='text-xl font-semibold mt-4 mb-4'>Signup</h3>
+                            </div>
+                            <form class='space-y-2' action='#'>
+                                <div className='row flex justify-between'>
+                                    <label for='firstName' className='block mb-2 text-md font-medium'></label>
+                                    <input type='firstName' name='firstName' className='mr-1 bg-gray-50 border border-slate-300 text-md rounded-lg focus:bg-slate-100 focus:outline-secondarycol block w-full p-2.5' placeholder='First name' required />
                                     <label for='lastName' className='block mb-2 text-sm font-medium'></label>
-                                    <input type='lastName' name='lastName' className='ml-1 bg-gray-50 border border-slate-300 text-sm rounded-lg focus:bg-slate-100 focus:outline-secondarycol block w-full p-2.5' placeholder='Last name' required />
-                                    </div>
-                                    <label for='email' className='block mb-2 text-sm font-medium'></label>
-                                    <input type='email' name='email' className='bg-gray-50 border border-slate-300 text-sm rounded-lg focus:bg-slate-100 focus:outline-secondarycol block w-full p-2.5' placeholder='Email: e.g. johnwick@coder.com' required />
-                                    <label for='password' className='block mb-2 text-sm font-medium'></label>
-                                    <input type='password' name='password' className='bg-gray-50 border border-slate-300 text-sm rounded-lg focus:bg-slate-100 focus:outline-secondarycol block w-full p-2.5' placeholder='Unique password' required />
+                                    <input type='lastName' name='lastName' className='ml-1 bg-gray-50 border border-slate-300 text-md rounded-lg focus:bg-slate-100 focus:outline-secondarycol block w-full p-2.5' placeholder='Last name' required />
+                                </div>
+                                <label for='email' className='block mb-2 text-md font-medium'></label>
+                                <input type='email' name='email' className='bg-gray-50 border border-slate-300 text-md rounded-lg focus:bg-slate-100 focus:outline-secondarycol block w-full p-2.5' placeholder='Email: e.g. johnwick@coder.com' required />
+                                <label for='password' className='block mb-2 text-md font-medium'></label>
+                                <input type='password' name='password' className='bg-gray-50 border border-slate-300 text-md rounded-lg focus:bg-slate-100 focus:outline-secondarycol block w-full p-2.5' placeholder='Unique password' required />
+                                <div>
+                                    <small className='text-xs'>
+                                        People who use our service may have uploaded your contact information to Facebook.
+                                        <a href='#' className='text-xs text-blue-700 hover:underline'> Learn more.</a>
+                                    </small>
+                                </div>
+                                <div>
+                                    <small className='text-xs'>By clicking Sign Up, you agree to our
+                                        <a href='#' className='text-xs text-blue-700 hover:underline'> Terms</a>
+                                        ,
+                                        <a href='#' className='text-xs text-blue-700 hover:underline'> Private Policy </a>
+                                         and
+                                        <a href='#' className='text-xs text-blue-700 hover:underline'> Cookies Policy</a>
+                                         . You may receive SMS Notifications from us and can opt out any time.
+                                    </small>
+                                </div>
+                                <div className='flex justify-center'>
+                                    <button type='submit' className='w-[60%] text-white bg-secondarycol hover:scale-105 transition-all hover:bg-secondaryLight focus:ring-4 focus:outline-none font-medium rounded-full text-md px-5 py-2.5 text-center'>Create your account</button>
                                 </div>
                             </form>
                         </div>
